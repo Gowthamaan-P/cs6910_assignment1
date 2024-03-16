@@ -1,0 +1,52 @@
+{
+    "os": "Windows-10-10.0.22621-SP0",
+    "python": "3.8.8",
+    "heartbeatAt": "2024-03-16T10:50:05.498608",
+    "startedAt": "2024-03-16T10:50:03.982559",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "<python with no main file>",
+    "codePathLocal": null,
+    "git": {
+        "remote": "git@github-gv:Gowthamaan-P/cs6910_assignment1.git",
+        "commit": "d537acb7271b162d14df34e74a655f66efa77f0d"
+    },
+    "email": "ravigowthamaan@gmail.com",
+    "root": "G:/IITM/Courses/CS6910 FDL/Assignments/Assignment - 1",
+    "host": "Gv",
+    "username": "ravig",
+    "executable": "E:\\Anaconda\\python.exe",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 1600.0,
+        "min": 0.0,
+        "max": 1800.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1600.0,
+            "min": 0.0,
+            "max": 1800.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 99.99999618530273,
+            "used": 15.654918670654297
+        }
+    },
+    "gpu": "NVIDIA GeForce MX150",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce MX150",
+            "memory_total": 2147483648
+        }
+    ],
+    "memory": {
+        "total": 15.889205932617188
+    }
+}
