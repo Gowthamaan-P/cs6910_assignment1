@@ -5,8 +5,9 @@ class NeuralLayer:
     
     # Init the layer
     def __init__(self, n_input, n_neurons, activation=None, weights=None, bias=None):
-        self.activation = activation
+        self.activation = activation if activation is not None else 'relu'
         self.weights = weights if weights is not None else np.random.randn(n_input, n_neurons)
+        self.velocity = np.zeros_like(self.weights)
         self.bias = bias if bias is not None else np.random.randn(n_neurons)
         self.last_activation = None
         self.error = None
@@ -26,6 +27,8 @@ class NeuralLayer:
             return np.tanh(r)
         elif self.activation == 'relu':
             return r if r>0 else 0
+        elif self.activation == 'softmax':
+            return (np.exp(r).T / np.sum(np.exp(r),axis=1)).T
         return r
 
     # Derivative of the Activation function (will be used in backpropagation)
@@ -36,4 +39,6 @@ class NeuralLayer:
             return (1 - r**2)
         elif self.activation == 'relu':
             return 1 if r>0 else 0
+        elif self.activation == 'softmax':
+            return np.diag(r) - np.outer(r, r)
         return r
