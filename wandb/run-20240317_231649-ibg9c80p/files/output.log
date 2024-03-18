@@ -1,0 +1,3 @@
+Create sweep with ID: i1dshlxj
+Sweep URL: https://wandb.ai/ed23s037/Hyperparameter_Sweep/sweeps/i1dshlxj
+wandb: WARNING Calling wandb.login() after wandb.init() has no effect.

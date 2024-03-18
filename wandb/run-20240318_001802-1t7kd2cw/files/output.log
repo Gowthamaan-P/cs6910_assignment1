@@ -1,0 +1,4 @@
+
+wandb: WARNING Calling wandb.login() after wandb.init() has no effect.
+Create sweep with ID: s156c87g
+Sweep URL: https://wandb.ai/ed23s037/CS6910_AS1/sweeps/s156c87g

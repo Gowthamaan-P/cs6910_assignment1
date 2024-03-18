@@ -1,0 +1,297 @@
+2024-03-17 22:57:20,982 INFO    StreamThr :17576 [internal.py:wandb_internal():86] W&B internal server running at pid: 17576, started at: 2024-03-17 22:57:20.982627
+2024-03-17 22:57:20,982 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: status
+2024-03-17 22:57:20,982 INFO    WriterThread:17576 [datastore.py:open_for_write():87] open: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\run-bgzzs9u9.wandb
+2024-03-17 22:57:20,992 DEBUG   SenderThread:17576 [sender.py:send():378] send: header
+2024-03-17 22:57:21,012 DEBUG   SenderThread:17576 [sender.py:send():378] send: run
+2024-03-17 22:57:21,929 INFO    SenderThread:17576 [dir_watcher.py:__init__():211] watching files in: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files
+2024-03-17 22:57:21,930 INFO    SenderThread:17576 [sender.py:_start_run_threads():1099] run started: bgzzs9u9 with start time 1710696440.960573
+2024-03-17 22:57:21,938 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: check_version
+2024-03-17 22:57:21,938 DEBUG   SenderThread:17576 [sender.py:send_request():405] send_request: check_version
+2024-03-17 22:57:22,351 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: run_start
+2024-03-17 22:57:22,381 DEBUG   HandlerThread:17576 [system_info.py:__init__():26] System info init
+2024-03-17 22:57:22,381 DEBUG   HandlerThread:17576 [system_info.py:__init__():41] System info init done
+2024-03-17 22:57:22,381 INFO    HandlerThread:17576 [system_monitor.py:start():194] Starting system monitor
+2024-03-17 22:57:22,381 INFO    SystemMonitor:17576 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-03-17 22:57:22,381 INFO    HandlerThread:17576 [system_monitor.py:probe():214] Collecting system info
+2024-03-17 22:57:22,381 INFO    SystemMonitor:17576 [interfaces.py:start():190] Started cpu monitoring
+2024-03-17 22:57:22,381 INFO    SystemMonitor:17576 [interfaces.py:start():190] Started disk monitoring
+2024-03-17 22:57:22,381 INFO    SystemMonitor:17576 [interfaces.py:start():190] Started gpu monitoring
+2024-03-17 22:57:22,381 INFO    SystemMonitor:17576 [interfaces.py:start():190] Started memory monitoring
+2024-03-17 22:57:22,391 INFO    SystemMonitor:17576 [interfaces.py:start():190] Started network monitoring
+2024-03-17 22:57:22,411 DEBUG   HandlerThread:17576 [system_info.py:probe():150] Probing system
+2024-03-17 22:57:22,411 ERROR   gpu       :17576 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 22:57:22,411 ERROR   gpu       :17576 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 22:57:22,439 DEBUG   HandlerThread:17576 [system_info.py:_probe_git():135] Probing git
+2024-03-17 22:57:22,520 DEBUG   HandlerThread:17576 [system_info.py:_probe_git():143] Probing git done
+2024-03-17 22:57:22,520 DEBUG   HandlerThread:17576 [system_info.py:probe():198] Probing system done
+2024-03-17 22:57:22,520 DEBUG   HandlerThread:17576 [system_monitor.py:probe():223] {'os': 'Windows-10-10.0.22621-SP0', 'python': '3.8.8', 'heartbeatAt': '2024-03-17T17:27:22.411504', 'startedAt': '2024-03-17T17:27:20.901492', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'g:\\IITM\\Courses\\CS6910 FDL\\Assignments\\Assignment - 1\\src\\Q1.py', 'codePathLocal': 'src\\Q1.py', 'codePath': 'src\\Q1.py', 'git': {'remote': 'git@github-gv:Gowthamaan-P/cs6910_assignment1.git', 'commit': 'a54836d996a192eb031a5ff9ac3c297ce90ce472'}, 'email': 'ravigowthamaan@gmail.com', 'root': 'G:/IITM/Courses/CS6910 FDL/Assignments/Assignment - 1', 'host': 'Gv', 'username': 'ravig', 'executable': 'E:\\Anaconda\\python.exe', 'cpu_count': 4, 'cpu_count_logical': 8, 'cpu_freq': {'current': 1600.0, 'min': 0.0, 'max': 1800.0}, 'cpu_freq_per_core': [{'current': 1600.0, 'min': 0.0, 'max': 1800.0}], 'disk': {'/': {'total': 99.99999618530273, 'used': 15.663501739501953}}, 'gpu': 'NVIDIA GeForce MX150', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce MX150', 'memory_total': 2147483648}], 'memory': {'total': 15.889205932617188}}
+2024-03-17 22:57:22,520 INFO    HandlerThread:17576 [system_monitor.py:probe():224] Finished collecting system info
+2024-03-17 22:57:22,520 INFO    HandlerThread:17576 [system_monitor.py:probe():227] Publishing system info
+2024-03-17 22:57:22,520 DEBUG   HandlerThread:17576 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-03-17 22:57:22,933 INFO    Thread-16 :17576 [dir_watcher.py:_on_file_created():271] file/dir created: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\conda-environment.yaml
+2024-03-17 22:57:24,440 ERROR   gpu       :17576 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 22:57:24,440 ERROR   gpu       :17576 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 22:57:25,369 DEBUG   HandlerThread:17576 [system_info.py:_save_conda():219] Saving conda packages done
+2024-03-17 22:57:25,369 INFO    HandlerThread:17576 [system_monitor.py:probe():229] Finished publishing system info
+2024-03-17 22:57:25,396 DEBUG   SenderThread:17576 [sender.py:send():378] send: files
+2024-03-17 22:57:25,397 INFO    SenderThread:17576 [sender.py:_save_file():1365] saving file wandb-metadata.json with policy now
+2024-03-17 22:57:25,933 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: python_packages
+2024-03-17 22:57:25,933 DEBUG   SenderThread:17576 [sender.py:send_request():405] send_request: python_packages
+2024-03-17 22:57:25,943 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-17 22:57:25,943 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-17 22:57:25,943 DEBUG   SenderThread:17576 [sender.py:send_request():405] send_request: stop_status
+2024-03-17 22:57:25,943 INFO    Thread-16 :17576 [dir_watcher.py:_on_file_created():271] file/dir created: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\requirements.txt
+2024-03-17 22:57:25,943 INFO    Thread-16 :17576 [dir_watcher.py:_on_file_created():271] file/dir created: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\wandb-metadata.json
+2024-03-17 22:57:26,413 DEBUG   SenderThread:17576 [sender.py:send():378] send: telemetry
+2024-03-17 22:57:26,413 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 22:57:26,466 ERROR   gpu       :17576 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 22:57:26,466 ERROR   gpu       :17576 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 22:57:26,866 INFO    wandb-upload_0:17576 [upload_job.py:push():131] Uploaded file C:\Users\ravig\AppData\Local\Temp\tmpv7l3aqm2wandb\smt570cv-wandb-metadata.json
+2024-03-17 22:57:28,491 ERROR   gpu       :17576 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 22:57:28,491 ERROR   gpu       :17576 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 22:57:29,821 DEBUG   SenderThread:17576 [sender.py:send():378] send: files
+2024-03-17 22:57:29,831 INFO    SenderThread:17576 [sender.py:_save_file():1365] saving file media\images\Sample Images_0_7f9147937f711e4ba16e.png with policy now
+2024-03-17 22:57:29,841 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: partial_history
+2024-03-17 22:57:29,841 DEBUG   SenderThread:17576 [sender.py:send():378] send: history
+2024-03-17 22:57:29,841 DEBUG   SenderThread:17576 [sender.py:send_request():405] send_request: summary_record
+2024-03-17 22:57:29,851 INFO    SenderThread:17576 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-03-17 22:57:29,861 DEBUG   SenderThread:17576 [sender.py:send():378] send: files
+2024-03-17 22:57:29,861 INFO    SenderThread:17576 [sender.py:_save_file():1365] saving file media\images\Sample Images_1_ba8afe5093296b9da95d.png with policy now
+2024-03-17 22:57:29,871 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: partial_history
+2024-03-17 22:57:29,871 DEBUG   SenderThread:17576 [sender.py:send():378] send: history
+2024-03-17 22:57:29,871 DEBUG   SenderThread:17576 [sender.py:send_request():405] send_request: summary_record
+2024-03-17 22:57:29,871 INFO    SenderThread:17576 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-03-17 22:57:29,891 DEBUG   SenderThread:17576 [sender.py:send():378] send: files
+2024-03-17 22:57:29,891 INFO    SenderThread:17576 [sender.py:_save_file():1365] saving file media\images\Sample Images_2_cd8689e0f2a035303171.png with policy now
+2024-03-17 22:57:29,891 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: partial_history
+2024-03-17 22:57:29,891 DEBUG   SenderThread:17576 [sender.py:send():378] send: history
+2024-03-17 22:57:29,891 DEBUG   SenderThread:17576 [sender.py:send_request():405] send_request: summary_record
+2024-03-17 22:57:29,891 INFO    SenderThread:17576 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-03-17 22:57:29,911 DEBUG   SenderThread:17576 [sender.py:send():378] send: files
+2024-03-17 22:57:29,911 INFO    SenderThread:17576 [sender.py:_save_file():1365] saving file media\images\Sample Images_3_65989982ca9140b3494a.png with policy now
+2024-03-17 22:57:29,911 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: partial_history
+2024-03-17 22:57:29,921 DEBUG   SenderThread:17576 [sender.py:send():378] send: history
+2024-03-17 22:57:29,921 DEBUG   SenderThread:17576 [sender.py:send_request():405] send_request: summary_record
+2024-03-17 22:57:29,921 INFO    SenderThread:17576 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-03-17 22:57:29,934 DEBUG   SenderThread:17576 [sender.py:send():378] send: files
+2024-03-17 22:57:29,934 INFO    SenderThread:17576 [sender.py:_save_file():1365] saving file media\images\Sample Images_4_c994f021ba36204ca3c1.png with policy now
+2024-03-17 22:57:29,934 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: partial_history
+2024-03-17 22:57:29,934 DEBUG   SenderThread:17576 [sender.py:send():378] send: history
+2024-03-17 22:57:29,934 DEBUG   SenderThread:17576 [sender.py:send_request():405] send_request: summary_record
+2024-03-17 22:57:29,934 INFO    SenderThread:17576 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-03-17 22:57:29,960 DEBUG   SenderThread:17576 [sender.py:send():378] send: files
+2024-03-17 22:57:29,960 INFO    SenderThread:17576 [sender.py:_save_file():1365] saving file media\images\Sample Images_5_352ec8bcbb7f793c3857.png with policy now
+2024-03-17 22:57:29,965 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: partial_history
+2024-03-17 22:57:29,966 DEBUG   SenderThread:17576 [sender.py:send():378] send: history
+2024-03-17 22:57:29,966 DEBUG   SenderThread:17576 [sender.py:send_request():405] send_request: summary_record
+2024-03-17 22:57:29,966 INFO    SenderThread:17576 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-03-17 22:57:29,976 INFO    Thread-16 :17576 [dir_watcher.py:_on_file_created():271] file/dir created: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\media\images\Sample Images_1_ba8afe5093296b9da95d.png
+2024-03-17 22:57:29,977 INFO    Thread-16 :17576 [dir_watcher.py:_on_file_created():271] file/dir created: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\media\images\Sample Images_0_7f9147937f711e4ba16e.png
+2024-03-17 22:57:29,977 INFO    Thread-16 :17576 [dir_watcher.py:_on_file_created():271] file/dir created: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\media\images\Sample Images_4_c994f021ba36204ca3c1.png
+2024-03-17 22:57:29,978 INFO    Thread-16 :17576 [dir_watcher.py:_on_file_created():271] file/dir created: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\media\images\Sample Images_2_cd8689e0f2a035303171.png
+2024-03-17 22:57:29,978 INFO    Thread-16 :17576 [dir_watcher.py:_on_file_created():271] file/dir created: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\wandb-summary.json
+2024-03-17 22:57:29,978 INFO    Thread-16 :17576 [dir_watcher.py:_on_file_created():271] file/dir created: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\media\images\Sample Images_3_65989982ca9140b3494a.png
+2024-03-17 22:57:29,979 INFO    Thread-16 :17576 [dir_watcher.py:_on_file_created():271] file/dir created: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\media\images\Sample Images_5_352ec8bcbb7f793c3857.png
+2024-03-17 22:57:29,979 INFO    Thread-16 :17576 [dir_watcher.py:_on_file_created():271] file/dir created: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\media
+2024-03-17 22:57:29,979 INFO    Thread-16 :17576 [dir_watcher.py:_on_file_created():271] file/dir created: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\media\images
+2024-03-17 22:57:29,979 DEBUG   SenderThread:17576 [sender.py:send():378] send: files
+2024-03-17 22:57:29,979 INFO    SenderThread:17576 [sender.py:_save_file():1365] saving file media\images\Sample Images_6_c5a7eaa6a52ac0e794bb.png with policy now
+2024-03-17 22:57:29,989 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: partial_history
+2024-03-17 22:57:29,989 DEBUG   SenderThread:17576 [sender.py:send():378] send: history
+2024-03-17 22:57:29,989 DEBUG   SenderThread:17576 [sender.py:send_request():405] send_request: summary_record
+2024-03-17 22:57:29,989 INFO    SenderThread:17576 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-03-17 22:57:29,999 DEBUG   SenderThread:17576 [sender.py:send():378] send: files
+2024-03-17 22:57:29,999 INFO    SenderThread:17576 [sender.py:_save_file():1365] saving file media\images\Sample Images_7_4d144877c9093c197264.png with policy now
+2024-03-17 22:57:30,009 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: partial_history
+2024-03-17 22:57:30,009 DEBUG   SenderThread:17576 [sender.py:send():378] send: history
+2024-03-17 22:57:30,009 DEBUG   SenderThread:17576 [sender.py:send_request():405] send_request: summary_record
+2024-03-17 22:57:30,009 INFO    SenderThread:17576 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-03-17 22:57:30,029 DEBUG   SenderThread:17576 [sender.py:send():378] send: files
+2024-03-17 22:57:30,029 INFO    SenderThread:17576 [sender.py:_save_file():1365] saving file media\images\Sample Images_8_f9ae28233f32bf80214f.png with policy now
+2024-03-17 22:57:30,029 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: partial_history
+2024-03-17 22:57:30,029 DEBUG   SenderThread:17576 [sender.py:send():378] send: history
+2024-03-17 22:57:30,029 DEBUG   SenderThread:17576 [sender.py:send_request():405] send_request: summary_record
+2024-03-17 22:57:30,039 INFO    SenderThread:17576 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-03-17 22:57:30,049 DEBUG   SenderThread:17576 [sender.py:send():378] send: files
+2024-03-17 22:57:30,049 INFO    SenderThread:17576 [sender.py:_save_file():1365] saving file media\images\Sample Images_9_adf48a208b1e9f1a3b47.png with policy now
+2024-03-17 22:57:30,049 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: partial_history
+2024-03-17 22:57:30,059 DEBUG   SenderThread:17576 [sender.py:send():378] send: history
+2024-03-17 22:57:30,059 DEBUG   SenderThread:17576 [sender.py:send_request():405] send_request: summary_record
+2024-03-17 22:57:30,059 INFO    SenderThread:17576 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-03-17 22:57:30,059 DEBUG   SenderThread:17576 [sender.py:send():378] send: telemetry
+2024-03-17 22:57:30,059 DEBUG   SenderThread:17576 [sender.py:send():378] send: exit
+2024-03-17 22:57:30,059 INFO    SenderThread:17576 [sender.py:send_exit():585] handling exit code: 0
+2024-03-17 22:57:30,059 INFO    SenderThread:17576 [sender.py:send_exit():587] handling runtime: 7
+2024-03-17 22:57:30,059 INFO    SenderThread:17576 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-03-17 22:57:30,059 INFO    SenderThread:17576 [sender.py:send_exit():593] send defer
+2024-03-17 22:57:30,059 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: defer
+2024-03-17 22:57:30,059 INFO    HandlerThread:17576 [handler.py:handle_request_defer():172] handle defer: 0
+2024-03-17 22:57:30,059 DEBUG   SenderThread:17576 [sender.py:send_request():405] send_request: defer
+2024-03-17 22:57:30,059 INFO    SenderThread:17576 [sender.py:send_request_defer():609] handle sender defer: 0
+2024-03-17 22:57:30,059 INFO    SenderThread:17576 [sender.py:transition_state():613] send defer: 1
+2024-03-17 22:57:30,059 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: defer
+2024-03-17 22:57:30,059 INFO    HandlerThread:17576 [handler.py:handle_request_defer():172] handle defer: 1
+2024-03-17 22:57:30,059 DEBUG   SenderThread:17576 [sender.py:send_request():405] send_request: defer
+2024-03-17 22:57:30,059 INFO    SenderThread:17576 [sender.py:send_request_defer():609] handle sender defer: 1
+2024-03-17 22:57:30,059 INFO    SenderThread:17576 [sender.py:transition_state():613] send defer: 2
+2024-03-17 22:57:30,059 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: defer
+2024-03-17 22:57:30,059 INFO    HandlerThread:17576 [handler.py:handle_request_defer():172] handle defer: 2
+2024-03-17 22:57:30,059 INFO    HandlerThread:17576 [system_monitor.py:finish():203] Stopping system monitor
+2024-03-17 22:57:30,059 DEBUG   SystemMonitor:17576 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-03-17 22:57:30,059 DEBUG   SystemMonitor:17576 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-03-17 22:57:30,059 DEBUG   SystemMonitor:17576 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-03-17 22:57:30,069 INFO    HandlerThread:17576 [interfaces.py:finish():202] Joined cpu monitor
+2024-03-17 22:57:30,069 INFO    HandlerThread:17576 [interfaces.py:finish():202] Joined disk monitor
+2024-03-17 22:57:30,119 ERROR   gpu       :17576 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2024-03-17 22:57:30,119 INFO    HandlerThread:17576 [interfaces.py:finish():202] Joined gpu monitor
+2024-03-17 22:57:30,119 INFO    HandlerThread:17576 [interfaces.py:finish():202] Joined memory monitor
+2024-03-17 22:57:30,119 INFO    HandlerThread:17576 [interfaces.py:finish():202] Joined network monitor
+2024-03-17 22:57:30,119 DEBUG   SenderThread:17576 [sender.py:send_request():405] send_request: defer
+2024-03-17 22:57:30,119 INFO    SenderThread:17576 [sender.py:send_request_defer():609] handle sender defer: 2
+2024-03-17 22:57:30,119 INFO    SenderThread:17576 [sender.py:transition_state():613] send defer: 3
+2024-03-17 22:57:30,119 DEBUG   SenderThread:17576 [sender.py:send():378] send: stats
+2024-03-17 22:57:30,119 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: defer
+2024-03-17 22:57:30,119 INFO    HandlerThread:17576 [handler.py:handle_request_defer():172] handle defer: 3
+2024-03-17 22:57:30,119 DEBUG   SenderThread:17576 [sender.py:send_request():405] send_request: defer
+2024-03-17 22:57:30,119 INFO    SenderThread:17576 [sender.py:send_request_defer():609] handle sender defer: 3
+2024-03-17 22:57:30,119 INFO    SenderThread:17576 [sender.py:transition_state():613] send defer: 4
+2024-03-17 22:57:30,119 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: defer
+2024-03-17 22:57:30,119 INFO    HandlerThread:17576 [handler.py:handle_request_defer():172] handle defer: 4
+2024-03-17 22:57:30,119 DEBUG   SenderThread:17576 [sender.py:send_request():405] send_request: defer
+2024-03-17 22:57:30,119 INFO    SenderThread:17576 [sender.py:send_request_defer():609] handle sender defer: 4
+2024-03-17 22:57:30,119 INFO    SenderThread:17576 [sender.py:transition_state():613] send defer: 5
+2024-03-17 22:57:30,119 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: defer
+2024-03-17 22:57:30,119 INFO    HandlerThread:17576 [handler.py:handle_request_defer():172] handle defer: 5
+2024-03-17 22:57:30,119 DEBUG   SenderThread:17576 [sender.py:send():378] send: summary
+2024-03-17 22:57:30,119 INFO    SenderThread:17576 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-03-17 22:57:30,119 DEBUG   SenderThread:17576 [sender.py:send_request():405] send_request: defer
+2024-03-17 22:57:30,119 INFO    SenderThread:17576 [sender.py:send_request_defer():609] handle sender defer: 5
+2024-03-17 22:57:30,119 INFO    SenderThread:17576 [sender.py:transition_state():613] send defer: 6
+2024-03-17 22:57:30,119 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: defer
+2024-03-17 22:57:30,119 INFO    HandlerThread:17576 [handler.py:handle_request_defer():172] handle defer: 6
+2024-03-17 22:57:30,119 DEBUG   SenderThread:17576 [sender.py:send_request():405] send_request: defer
+2024-03-17 22:57:30,119 INFO    SenderThread:17576 [sender.py:send_request_defer():609] handle sender defer: 6
+2024-03-17 22:57:30,129 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 22:57:30,587 INFO    SenderThread:17576 [sender.py:transition_state():613] send defer: 7
+2024-03-17 22:57:30,587 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: defer
+2024-03-17 22:57:30,587 INFO    HandlerThread:17576 [handler.py:handle_request_defer():172] handle defer: 7
+2024-03-17 22:57:30,587 DEBUG   SenderThread:17576 [sender.py:send_request():405] send_request: defer
+2024-03-17 22:57:30,587 INFO    SenderThread:17576 [sender.py:send_request_defer():609] handle sender defer: 7
+2024-03-17 22:57:30,587 INFO    SenderThread:17576 [sender.py:transition_state():613] send defer: 8
+2024-03-17 22:57:30,587 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: defer
+2024-03-17 22:57:30,587 INFO    HandlerThread:17576 [handler.py:handle_request_defer():172] handle defer: 8
+2024-03-17 22:57:30,587 DEBUG   SenderThread:17576 [sender.py:send_request():405] send_request: defer
+2024-03-17 22:57:30,587 INFO    SenderThread:17576 [sender.py:send_request_defer():609] handle sender defer: 8
+2024-03-17 22:57:30,587 INFO    SenderThread:17576 [job_builder.py:build():298] Attempting to build job artifact
+2024-03-17 22:57:30,587 INFO    SenderThread:17576 [job_builder.py:_get_source_type():428] is repo sourced job
+2024-03-17 22:57:30,607 INFO    wandb-upload_0:17576 [upload_job.py:push():131] Uploaded file C:\Users\ravig\AppData\Local\Temp\tmpv7l3aqm2wandb\zzhjzwju-media/images/Sample Images_0_7f9147937f711e4ba16e.png
+2024-03-17 22:57:30,693 INFO    SenderThread:17576 [job_builder.py:build():404] adding wandb-job metadata file
+2024-03-17 22:57:30,715 INFO    SenderThread:17576 [sender.py:transition_state():613] send defer: 9
+2024-03-17 22:57:30,715 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: defer
+2024-03-17 22:57:30,715 INFO    HandlerThread:17576 [handler.py:handle_request_defer():172] handle defer: 9
+2024-03-17 22:57:30,715 DEBUG   SenderThread:17576 [sender.py:send():378] send: artifact
+2024-03-17 22:57:30,835 INFO    wandb-upload_1:17576 [upload_job.py:push():131] Uploaded file C:\Users\ravig\AppData\Local\Temp\tmpv7l3aqm2wandb\1ljh1ytm-media/images/Sample Images_1_ba8afe5093296b9da95d.png
+2024-03-17 22:57:30,984 INFO    Thread-16 :17576 [dir_watcher.py:_on_file_modified():288] file/dir modified: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\wandb-summary.json
+2024-03-17 22:57:30,985 INFO    Thread-16 :17576 [dir_watcher.py:_on_file_modified():288] file/dir modified: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\config.yaml
+2024-03-17 22:57:30,986 INFO    Thread-16 :17576 [dir_watcher.py:_on_file_created():271] file/dir created: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\media\images\Sample Images_6_c5a7eaa6a52ac0e794bb.png
+2024-03-17 22:57:30,989 INFO    Thread-16 :17576 [dir_watcher.py:_on_file_created():271] file/dir created: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\media\images\Sample Images_7_4d144877c9093c197264.png
+2024-03-17 22:57:30,991 INFO    Thread-16 :17576 [dir_watcher.py:_on_file_created():271] file/dir created: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\media\images\Sample Images_9_adf48a208b1e9f1a3b47.png
+2024-03-17 22:57:30,992 INFO    Thread-16 :17576 [dir_watcher.py:_on_file_created():271] file/dir created: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\media\images\Sample Images_8_f9ae28233f32bf80214f.png
+2024-03-17 22:57:30,995 INFO    Thread-16 :17576 [dir_watcher.py:_on_file_modified():288] file/dir modified: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\media\images
+2024-03-17 22:57:31,005 INFO    wandb-upload_2:17576 [upload_job.py:push():131] Uploaded file C:\Users\ravig\AppData\Local\Temp\tmpv7l3aqm2wandb\ia6wfbig-media/images/Sample Images_2_cd8689e0f2a035303171.png
+2024-03-17 22:57:31,015 INFO    wandb-upload_4:17576 [upload_job.py:push():131] Uploaded file C:\Users\ravig\AppData\Local\Temp\tmpv7l3aqm2wandb\hqg04aiw-media/images/Sample Images_4_c994f021ba36204ca3c1.png
+2024-03-17 22:57:31,025 INFO    wandb-upload_3:17576 [upload_job.py:push():131] Uploaded file C:\Users\ravig\AppData\Local\Temp\tmpv7l3aqm2wandb\76zeas5n-media/images/Sample Images_3_65989982ca9140b3494a.png
+2024-03-17 22:57:31,056 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: poll_exit
+2024-03-17 22:57:31,066 INFO    wandb-upload_5:17576 [upload_job.py:push():131] Uploaded file C:\Users\ravig\AppData\Local\Temp\tmpv7l3aqm2wandb\f81038hq-media/images/Sample Images_5_352ec8bcbb7f793c3857.png
+2024-03-17 22:57:31,106 INFO    wandb-upload_7:17576 [upload_job.py:push():131] Uploaded file C:\Users\ravig\AppData\Local\Temp\tmpv7l3aqm2wandb\2lghxgpa-media/images/Sample Images_7_4d144877c9093c197264.png
+2024-03-17 22:57:31,145 INFO    wandb-upload_6:17576 [upload_job.py:push():131] Uploaded file C:\Users\ravig\AppData\Local\Temp\tmpv7l3aqm2wandb\wxl05ai0-media/images/Sample Images_6_c5a7eaa6a52ac0e794bb.png
+2024-03-17 22:57:31,155 INFO    wandb-upload_9:17576 [upload_job.py:push():131] Uploaded file C:\Users\ravig\AppData\Local\Temp\tmpv7l3aqm2wandb\qazomfs2-media/images/Sample Images_9_adf48a208b1e9f1a3b47.png
+2024-03-17 22:57:31,165 INFO    wandb-upload_8:17576 [upload_job.py:push():131] Uploaded file C:\Users\ravig\AppData\Local\Temp\tmpv7l3aqm2wandb\jk8joyjx-media/images/Sample Images_8_f9ae28233f32bf80214f.png
+2024-03-17 22:57:31,721 INFO    wandb-upload_0:17576 [upload_job.py:push():131] Uploaded file C:\Users\ravig\AppData\Local\Temp\tmpv7l3aqm2wandb\poiapg97-media/images/Sample Images_0_7f9147937f711e4ba16e.png
+2024-03-17 22:57:31,938 INFO    wandb-upload_1:17576 [upload_job.py:push():131] Uploaded file C:\Users\ravig\AppData\Local\Temp\tmpv7l3aqm2wandb\y6cfycne-media/images/Sample Images_2_cd8689e0f2a035303171.png
+2024-03-17 22:57:31,942 INFO    wandb-upload_3:17576 [upload_job.py:push():131] Uploaded file C:\Users\ravig\AppData\Local\Temp\tmpv7l3aqm2wandb\3ogl4o1t-media/images/Sample Images_5_352ec8bcbb7f793c3857.png
+2024-03-17 22:57:31,977 INFO    wandb-upload_5:17576 [upload_job.py:push():131] Uploaded file C:\Users\ravig\AppData\Local\Temp\tmpv7l3aqm2wandb\wvw76bc3-media/images/Sample Images_1_ba8afe5093296b9da95d.png
+2024-03-17 22:57:31,978 INFO    wandb-upload_4:17576 [upload_job.py:push():131] Uploaded file C:\Users\ravig\AppData\Local\Temp\tmpv7l3aqm2wandb\z91szi21-media/images/Sample Images_3_65989982ca9140b3494a.png
+2024-03-17 22:57:31,995 INFO    wandb-upload_7:17576 [upload_job.py:push():131] Uploaded file C:\Users\ravig\AppData\Local\Temp\tmpv7l3aqm2wandb\p2fl6e6k-media/images/Sample Images_6_c5a7eaa6a52ac0e794bb.png
+2024-03-17 22:57:32,055 INFO    wandb-upload_9:17576 [upload_job.py:push():131] Uploaded file C:\Users\ravig\AppData\Local\Temp\tmpv7l3aqm2wandb\9d7vhuxg-media/images/Sample Images_4_c994f021ba36204ca3c1.png
+2024-03-17 22:57:32,125 INFO    wandb-upload_6:17576 [upload_job.py:push():131] Uploaded file C:\Users\ravig\AppData\Local\Temp\tmpv7l3aqm2wandb\ms5xjv6a-media/images/Sample Images_7_4d144877c9093c197264.png
+2024-03-17 22:57:32,617 INFO    wandb-upload_8:17576 [upload_job.py:push():131] Uploaded file C:\Users\ravig\AppData\Local\Temp\tmpv7l3aqm2wandb\4696m7d0-media/images/Sample Images_9_adf48a208b1e9f1a3b47.png
+2024-03-17 22:57:32,830 INFO    wandb-upload_0:17576 [upload_job.py:push():131] Uploaded file C:\Users\ravig\AppData\Local\Temp\tmpv7l3aqm2wandb\ah2xydtt-media/images/Sample Images_8_f9ae28233f32bf80214f.png
+2024-03-17 22:57:33,225 INFO    wandb-upload_2:17576 [upload_job.py:push():89] Uploaded file C:\Users\ravig\AppData\Local\wandb\wandb\artifacts\staging\tmplag_03oj
+2024-03-17 22:57:33,255 INFO    wandb-upload_1:17576 [upload_job.py:push():89] Uploaded file C:\Users\ravig\AppData\Local\wandb\wandb\artifacts\staging\tmp16cx5o1b
+2024-03-17 22:57:35,282 INFO    SenderThread:17576 [sender.py:send_artifact():1443] sent artifact job-git_github-gv_Gowthamaan-P_cs6910_assignment1.git_src_Q1.py - {'id': 'QXJ0aWZhY3Q6NzYwMTcwNjI3', 'state': 'PENDING', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjE0OTc1ODQ4Ng==', 'latestArtifact': None}}
+2024-03-17 22:57:35,282 DEBUG   SenderThread:17576 [sender.py:send_request():405] send_request: defer
+2024-03-17 22:57:35,282 INFO    SenderThread:17576 [sender.py:send_request_defer():609] handle sender defer: 9
+2024-03-17 22:57:35,282 INFO    SenderThread:17576 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-03-17 22:57:35,282 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 22:57:36,017 INFO    SenderThread:17576 [dir_watcher.py:finish():388] scan: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files
+2024-03-17 22:57:36,017 INFO    SenderThread:17576 [dir_watcher.py:finish():402] scan save: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\conda-environment.yaml conda-environment.yaml
+2024-03-17 22:57:36,027 INFO    SenderThread:17576 [dir_watcher.py:finish():402] scan save: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\config.yaml config.yaml
+2024-03-17 22:57:36,027 INFO    SenderThread:17576 [dir_watcher.py:finish():402] scan save: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\requirements.txt requirements.txt
+2024-03-17 22:57:36,027 INFO    SenderThread:17576 [dir_watcher.py:finish():402] scan save: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\wandb-metadata.json wandb-metadata.json
+2024-03-17 22:57:36,027 INFO    SenderThread:17576 [dir_watcher.py:finish():402] scan save: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\wandb-summary.json wandb-summary.json
+2024-03-17 22:57:36,037 INFO    SenderThread:17576 [dir_watcher.py:finish():402] scan save: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\media\images\Sample Images_0_7f9147937f711e4ba16e.png media/images/Sample Images_0_7f9147937f711e4ba16e.png
+2024-03-17 22:57:36,037 INFO    SenderThread:17576 [dir_watcher.py:finish():402] scan save: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\media\images\Sample Images_1_ba8afe5093296b9da95d.png media/images/Sample Images_1_ba8afe5093296b9da95d.png
+2024-03-17 22:57:36,037 INFO    SenderThread:17576 [dir_watcher.py:finish():402] scan save: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\media\images\Sample Images_2_cd8689e0f2a035303171.png media/images/Sample Images_2_cd8689e0f2a035303171.png
+2024-03-17 22:57:36,037 INFO    SenderThread:17576 [dir_watcher.py:finish():402] scan save: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\media\images\Sample Images_3_65989982ca9140b3494a.png media/images/Sample Images_3_65989982ca9140b3494a.png
+2024-03-17 22:57:36,037 INFO    SenderThread:17576 [dir_watcher.py:finish():402] scan save: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\media\images\Sample Images_4_c994f021ba36204ca3c1.png media/images/Sample Images_4_c994f021ba36204ca3c1.png
+2024-03-17 22:57:36,037 INFO    SenderThread:17576 [dir_watcher.py:finish():402] scan save: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\media\images\Sample Images_5_352ec8bcbb7f793c3857.png media/images/Sample Images_5_352ec8bcbb7f793c3857.png
+2024-03-17 22:57:36,037 INFO    SenderThread:17576 [dir_watcher.py:finish():402] scan save: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\media\images\Sample Images_6_c5a7eaa6a52ac0e794bb.png media/images/Sample Images_6_c5a7eaa6a52ac0e794bb.png
+2024-03-17 22:57:36,037 INFO    SenderThread:17576 [dir_watcher.py:finish():402] scan save: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\media\images\Sample Images_7_4d144877c9093c197264.png media/images/Sample Images_7_4d144877c9093c197264.png
+2024-03-17 22:57:36,037 INFO    SenderThread:17576 [dir_watcher.py:finish():402] scan save: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\media\images\Sample Images_8_f9ae28233f32bf80214f.png media/images/Sample Images_8_f9ae28233f32bf80214f.png
+2024-03-17 22:57:36,037 INFO    SenderThread:17576 [dir_watcher.py:finish():402] scan save: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\media\images\Sample Images_9_adf48a208b1e9f1a3b47.png media/images/Sample Images_9_adf48a208b1e9f1a3b47.png
+2024-03-17 22:57:36,037 INFO    SenderThread:17576 [sender.py:transition_state():613] send defer: 10
+2024-03-17 22:57:36,037 DEBUG   SenderThread:17576 [sender.py:send_request():405] send_request: poll_exit
+2024-03-17 22:57:36,037 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: defer
+2024-03-17 22:57:36,037 INFO    HandlerThread:17576 [handler.py:handle_request_defer():172] handle defer: 10
+2024-03-17 22:57:36,037 DEBUG   SenderThread:17576 [sender.py:send_request():405] send_request: defer
+2024-03-17 22:57:36,037 INFO    SenderThread:17576 [sender.py:send_request_defer():609] handle sender defer: 10
+2024-03-17 22:57:36,037 INFO    SenderThread:17576 [file_pusher.py:finish():172] shutting down file pusher
+2024-03-17 22:57:36,079 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: keepalive
+2024-03-17 22:57:36,079 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: poll_exit
+2024-03-17 22:57:36,079 DEBUG   SenderThread:17576 [sender.py:send_request():405] send_request: poll_exit
+2024-03-17 22:57:36,815 INFO    wandb-upload_5:17576 [upload_job.py:push():131] Uploaded file G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\config.yaml
+2024-03-17 22:57:36,815 INFO    wandb-upload_3:17576 [upload_job.py:push():131] Uploaded file G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\wandb-summary.json
+2024-03-17 22:57:36,928 INFO    wandb-upload_7:17576 [upload_job.py:push():131] Uploaded file G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\files\requirements.txt
+2024-03-17 22:57:37,092 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: poll_exit
+2024-03-17 22:57:37,094 DEBUG   SenderThread:17576 [sender.py:send_request():405] send_request: poll_exit
+2024-03-17 22:57:37,134 INFO    Thread-15 :17576 [sender.py:transition_state():613] send defer: 11
+2024-03-17 22:57:37,134 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: defer
+2024-03-17 22:57:37,134 INFO    HandlerThread:17576 [handler.py:handle_request_defer():172] handle defer: 11
+2024-03-17 22:57:37,134 DEBUG   SenderThread:17576 [sender.py:send_request():405] send_request: defer
+2024-03-17 22:57:37,134 INFO    SenderThread:17576 [sender.py:send_request_defer():609] handle sender defer: 11
+2024-03-17 22:57:37,134 INFO    SenderThread:17576 [file_pusher.py:join():178] waiting for file pusher
+2024-03-17 22:57:37,141 INFO    SenderThread:17576 [sender.py:transition_state():613] send defer: 12
+2024-03-17 22:57:37,141 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: defer
+2024-03-17 22:57:37,141 INFO    HandlerThread:17576 [handler.py:handle_request_defer():172] handle defer: 12
+2024-03-17 22:57:37,141 DEBUG   SenderThread:17576 [sender.py:send_request():405] send_request: defer
+2024-03-17 22:57:37,141 INFO    SenderThread:17576 [sender.py:send_request_defer():609] handle sender defer: 12
+2024-03-17 22:57:37,141 INFO    SenderThread:17576 [file_stream.py:finish():595] file stream finish called
+2024-03-17 22:57:37,484 INFO    SenderThread:17576 [file_stream.py:finish():599] file stream finish is done
+2024-03-17 22:57:37,484 INFO    SenderThread:17576 [sender.py:transition_state():613] send defer: 13
+2024-03-17 22:57:37,484 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: defer
+2024-03-17 22:57:37,484 INFO    HandlerThread:17576 [handler.py:handle_request_defer():172] handle defer: 13
+2024-03-17 22:57:37,484 DEBUG   SenderThread:17576 [sender.py:send_request():405] send_request: defer
+2024-03-17 22:57:37,484 INFO    SenderThread:17576 [sender.py:send_request_defer():609] handle sender defer: 13
+2024-03-17 22:57:37,484 INFO    SenderThread:17576 [sender.py:transition_state():613] send defer: 14
+2024-03-17 22:57:37,484 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: defer
+2024-03-17 22:57:37,484 INFO    HandlerThread:17576 [handler.py:handle_request_defer():172] handle defer: 14
+2024-03-17 22:57:37,484 DEBUG   SenderThread:17576 [sender.py:send():378] send: final
+2024-03-17 22:57:37,484 DEBUG   SenderThread:17576 [sender.py:send():378] send: footer
+2024-03-17 22:57:37,484 DEBUG   SenderThread:17576 [sender.py:send_request():405] send_request: defer
+2024-03-17 22:57:37,484 INFO    SenderThread:17576 [sender.py:send_request_defer():609] handle sender defer: 14
+2024-03-17 22:57:37,484 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: poll_exit
+2024-03-17 22:57:37,484 DEBUG   SenderThread:17576 [sender.py:send_request():405] send_request: poll_exit
+2024-03-17 22:57:37,493 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-17 22:57:37,493 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: server_info
+2024-03-17 22:57:37,493 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: get_summary
+2024-03-17 22:57:37,493 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: sampled_history
+2024-03-17 22:57:37,493 DEBUG   SenderThread:17576 [sender.py:send_request():405] send_request: server_info
+2024-03-17 22:57:37,493 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: job_info
+2024-03-17 22:57:37,806 DEBUG   SenderThread:17576 [sender.py:send_request():405] send_request: job_info
+2024-03-17 22:57:37,810 DEBUG   HandlerThread:17576 [handler.py:handle_request():146] handle_request: shutdown
+2024-03-17 22:57:37,810 INFO    HandlerThread:17576 [handler.py:finish():869] shutting down handler
+2024-03-17 22:57:38,499 INFO    WriterThread:17576 [datastore.py:close():296] close: G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240317_225720-bgzzs9u9\run-bgzzs9u9.wandb
+2024-03-17 22:57:38,816 INFO    SenderThread:17576 [sender.py:finish():1521] shutting down sender
+2024-03-17 22:57:38,816 INFO    SenderThread:17576 [file_pusher.py:finish():172] shutting down file pusher
+2024-03-17 22:57:38,816 INFO    SenderThread:17576 [file_pusher.py:join():178] waiting for file pusher

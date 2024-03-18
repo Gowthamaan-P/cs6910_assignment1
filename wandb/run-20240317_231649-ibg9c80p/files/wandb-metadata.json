@@ -1,0 +1,53 @@
+{
+    "os": "Windows-10-10.0.22621-SP0",
+    "python": "3.8.8",
+    "heartbeatAt": "2024-03-17T17:46:50.903006",
+    "startedAt": "2024-03-17T17:46:49.621467",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "g:\\IITM\\Courses\\CS6910 FDL\\Assignments\\Assignment - 1\\src\\Q4.py",
+    "codePathLocal": "src\\Q4.py",
+    "codePath": "src\\Q4.py",
+    "git": {
+        "remote": "git@github-gv:Gowthamaan-P/cs6910_assignment1.git",
+        "commit": "a54836d996a192eb031a5ff9ac3c297ce90ce472"
+    },
+    "email": "ravigowthamaan@gmail.com",
+    "root": "G:/IITM/Courses/CS6910 FDL/Assignments/Assignment - 1",
+    "host": "Gv",
+    "username": "ravig",
+    "executable": "E:\\Anaconda\\python.exe",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 1600.0,
+        "min": 0.0,
+        "max": 1800.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1600.0,
+            "min": 0.0,
+            "max": 1800.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 99.99999618530273,
+            "used": 15.663604736328125
+        }
+    },
+    "gpu": "NVIDIA GeForce MX150",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce MX150",
+            "memory_total": 2147483648
+        }
+    ],
+    "memory": {
+        "total": 15.889205932617188
+    }
+}

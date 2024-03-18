@@ -1,0 +1,38 @@
+2024-03-18 00:18:28,779 INFO    Thread-13 :5156 [wandb_setup.py:_flush():76] Current SDK version is 0.16.4
+2024-03-18 00:18:28,779 INFO    Thread-13 :5156 [wandb_setup.py:_flush():76] Configure stats pid to 5156
+2024-03-18 00:18:28,779 INFO    Thread-13 :5156 [wandb_setup.py:_flush():76] Loading settings from C:\Users\ravig\.config\wandb\settings
+2024-03-18 00:18:28,779 INFO    Thread-13 :5156 [wandb_setup.py:_flush():76] Loading settings from G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\settings
+2024-03-18 00:18:28,779 INFO    Thread-13 :5156 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'project': 'CS6910_AS1', 'entity': 'ed23s037', 'root_dir': 'G:\\IITM\\Courses\\CS6910 FDL\\Assignments\\Assignment - 1', 'sweep_id': 's156c87g', 'run_id': 'ru7jcadw', 'sweep_param_path': 'G:\\IITM\\Courses\\CS6910 FDL\\Assignments\\Assignment - 1\\wandb\\sweep-s156c87g\\config-ru7jcadw.yaml'}
+2024-03-18 00:18:28,779 INFO    Thread-13 :5156 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-03-18 00:18:28,779 INFO    Thread-13 :5156 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'src\\Q4.py', 'program_abspath': 'g:\\IITM\\Courses\\CS6910 FDL\\Assignments\\Assignment - 1\\src\\Q4.py', 'program': 'g:\\IITM\\Courses\\CS6910 FDL\\Assignments\\Assignment - 1\\src\\Q4.py'}
+2024-03-18 00:18:28,779 INFO    Thread-13 :5156 [wandb_init.py:_log_setup():526] Logging user logs to G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240318_001828-ru7jcadw\logs\debug.log
+2024-03-18 00:18:28,779 INFO    Thread-13 :5156 [wandb_init.py:_log_setup():527] Logging internal logs to G:\IITM\Courses\CS6910 FDL\Assignments\Assignment - 1\wandb\run-20240318_001828-ru7jcadw\logs\debug-internal.log
+2024-03-18 00:18:28,779 INFO    Thread-13 :5156 [wandb_init.py:init():566] calling init triggers
+2024-03-18 00:18:28,779 INFO    Thread-13 :5156 [wandb_init.py:init():573] wandb.init called with sweep_config: {'activation': 'tanh', 'batch_size': 64, 'beta': [0.7, 0.8, 0.9], 'beta1': 0.9, 'beta2': 0.9999, 'criterion': 'cel', 'decay': 5e-06, 'epochs': [5, 10], 'epsilon': 1e-08, 'hidden_layers': 3, 'input_size': 784, 'learning_rate': 0.0001, 'neurons': 32, 'optimizer': 'rmsprop', 'output_activation': 'softmax', 'output_size': 10, 'weight_initialization': 'random'}
+config: {}
+2024-03-18 00:18:28,779 INFO    Thread-13 :5156 [wandb_init.py:init():611] wandb.init() called when a run is still active
+2024-03-18 00:18:29,208 ERROR   Thread-13 :5156 [wandb_init.py:init():1204] error
+Traceback (most recent call last):
+  File "E:\Anaconda\lib\site-packages\wandb\sdk\wandb_init.py", line 1176, in init
+    run = wi.init()
+  File "E:\Anaconda\lib\site-packages\wandb\sdk\wandb_init.py", line 613, in init
+    tel.feature.init_return_run = True
+  File "E:\Anaconda\lib\site-packages\wandb\sdk\lib\telemetry.py", line 42, in __exit__
+    self._run._telemetry_callback(self._obj)
+  File "E:\Anaconda\lib\site-packages\wandb\sdk\wandb_run.py", line 759, in _telemetry_callback
+    self._telemetry_flush()
+  File "E:\Anaconda\lib\site-packages\wandb\sdk\wandb_run.py", line 770, in _telemetry_flush
+    self._backend.interface._publish_telemetry(self._telemetry_obj)
+  File "E:\Anaconda\lib\site-packages\wandb\sdk\interface\interface_shared.py", line 101, in _publish_telemetry
+    self._publish(rec)
+  File "E:\Anaconda\lib\site-packages\wandb\sdk\interface\interface_sock.py", line 51, in _publish
+    self._sock_client.send_record_publish(record)
+  File "E:\Anaconda\lib\site-packages\wandb\sdk\lib\sock_client.py", line 221, in send_record_publish
+    self.send_server_request(server_req)
+  File "E:\Anaconda\lib\site-packages\wandb\sdk\lib\sock_client.py", line 155, in send_server_request
+    self._send_message(msg)
+  File "E:\Anaconda\lib\site-packages\wandb\sdk\lib\sock_client.py", line 152, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "E:\Anaconda\lib\site-packages\wandb\sdk\lib\sock_client.py", line 130, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
