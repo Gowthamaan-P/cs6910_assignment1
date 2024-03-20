@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 import numpy as np
 
 from ann.neural_network import NeuralNetwork
-from ann.objective_function import ObjectiveFunction
+from ann.objective_functions import ObjectiveFunction
 from ann.optimizer import Optimizer
 
 sweep_config = {
@@ -73,32 +73,23 @@ def accuracy(y, y_hat):
     return np.sum(np.argmax(y_hat, axis=1) == np.argmax(y, axis=1)) / y.shape[0]
     
 
-def wandb_sweep(): 
+def wandb_sweep():
+    train_loss_hist = []
+    train_accuracy_hist = []
+    val_loss_hist = []
+    val_accuracy_hist = []
+
     run = wandb.init()
     config = wandb.config
     run.name = f"hl_{config['hidden_layers']}_nu_{config['neurons']}_ac_{config['activation']}_lr_{config['learning_rate']}_bs_{config['batch_size']}_opt_{config['optimizer']}_de_{config['decay']}_init_{config['weight_initialization']}"
-    
-    nn = NeuralNetwork(input_size=config['input_size'], 
-                       output_size=config['output_size'], 
-                       hidden_layers=config['hidden_layers'], 
-                       neurons=config['neurons'],  
-                       activation=config['activation'], 
-                       output_activation=config['output_activation'],
-                       criterion=config['criterion'],
-                       weight_initialization=config['weight_initialization'])
-    
-    optimizer = Optimizer(neural_net=nn,
-                    lr=config['learning_rate'],
-                    optimizer=config['optimizer'],
-                    beta=config['beta'],
-                    epsilon=config['epsilon'],
-                    beta1=config['beta1'],
-                    beta2=config['beta2'],
-                    decay=config['decay'])
-    
+
+
+    nn = NeuralNetwork(config)
+    optimizer = Optimizer(nn=nn, config=config)
+
     batch_size = config['batch_size']
-    c = ObjectiveFunction()
-    
+    criterion = ObjectiveFunction(method = config['criterion'])
+
     for epoch in range(config['epochs']):
         for batch in range(0, X_train.shape[0], batch_size):
             # Get the batch of data
@@ -106,21 +97,21 @@ def wandb_sweep():
             Y_batch = Y_train[batch:batch+batch_size]
 
             Y_hat_batch = nn.forward(X_batch)
-            weights, biases = nn.backward(Y_batch, Y_hat_batch)
-            optimizer.step(weights, biases)
-        
+            nn.backward(X_batch, Y_batch, Y_hat_batch)
+            optimizer.step()
+
         optimizer.timestep += 1
-        
+
         # Training
         Y_hat_train = nn.forward(X_train)
-        train_loss = c.criterion(config['criterion'], Y_train, Y_hat_train)
-        train_accuracy = accuracy(Y_train, Y_hat_train)
-            
+        train_loss = criterion.get_loss(Y_train, Y_hat_train)
+        train_accuracy = np.sum(np.argmax(Y_hat_train, axis=1) == np.argmax(Y_train, axis=1)) / Y_train.shape[0]
+
         # Validation
         Y_hat_val = nn.forward(X_val)
-        val_loss = c.criterion(config['criterion'], Y_val, Y_hat_val)
-        val_accuracy = accuracy(Y_val, Y_hat_val)
-        
+        val_loss = criterion.get_loss(Y_val, Y_hat_val)
+        val_accuracy = np.sum(np.argmax(Y_hat_val, axis=1) == np.argmax(Y_val, axis=1)) / Y_val.shape[0]
+
         wandb.log({
             "epoch": epoch + 1,
             "train_loss": train_loss,
@@ -128,36 +119,41 @@ def wandb_sweep():
             "val_loss": val_loss,
             "val_accuracy": val_accuracy
         })
-        
+
+        train_loss_hist.append(train_loss)
+        train_accuracy_hist.append(train_accuracy)
+        val_loss_hist.append(val_loss)
+        val_accuracy_hist.append(val_accuracy)
+
     # Testing
-    Y_hat_test = nn.forward(test_images)
-    test_loss = c.criterion(config['criterion'], test_labels, Y_hat_test)
-    test_accuracy = accuracy(test_labels, Y_hat_test)
+    Y_hat_test = nn.forward(X_test)
+    test_loss = criterion.get_loss(Y_test, Y_hat_test)
+    test_accuracy = accuracy(Y_test, Y_hat_test)
     wandb.log({
         "test_loss": test_loss,
         "test_accuracy": test_accuracy
     })
-    
-    return nn
 
+    return nn, train_loss_hist, train_accuracy_hist, val_loss_hist, val_accuracy_hist
 
-# Setup Wandb
-wandb.login(key='5da0c161a9c9720f15195bb6e9f05e44c45112d1')
-wandb.init(project="CS6910_AS1", entity='ed23s037')
 
 # Load Input Data
 (train_images, train_labels), (test_images, test_labels) = fashion_mnist.load_data()
 
 # Flatten the images
 train_images = train_images.reshape(train_images.shape[0], 784) / 255
-test_images = test_images.reshape(test_images.shape[0], 784) / 255
+X_test = test_images.reshape(test_images.shape[0], 784) / 255
 
 # Encode the labels
 train_labels = np.eye(10)[train_labels]
-test_labels = np.eye(10)[test_labels]
+Y_test = np.eye(10)[test_labels]
 
 # Prepare data for training and validation
 X_train, X_val, Y_train, Y_val = train_test_split(train_images, train_labels, test_size=0.1, shuffle=True, random_state=27)
+
+# Setup Wandb
+wandb.login(key='5da0c161a9c9720f15195bb6e9f05e44c45112d1')
+wandb.init(project="CS6910_AS1", entity='ed23s037')
 
 # Do Sweep
 wandb_id = wandb.sweep(sweep_config, project="CS6910_AS1")

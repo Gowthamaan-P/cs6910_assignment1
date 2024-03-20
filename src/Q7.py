@@ -4,35 +4,20 @@ from sklearn.model_selection import train_test_split
 import numpy as np
 
 from ann.neural_network import NeuralNetwork
-from ann.objective_function import ObjectiveFunction
+from ann.objective_functions import ObjectiveFunction
 from ann.optimizer import Optimizer
 
-def train(config, show_log): 
+def train(config):
     train_loss_hist = []
     train_accuracy_hist = []
     val_loss_hist = []
     val_accuracy_hist = []
     
-    nn = NeuralNetwork(input_size=config['input_size'], 
-                       output_size=config['output_size'], 
-                       hidden_layers=config['hidden_layers'], 
-                       neurons=config['neurons'],  
-                       activation=config['activation'], 
-                       output_activation=config['output_activation'],
-                       criterion=config['criterion'],
-                       weight_initialization=config['weight_initialization'])
-    
-    optimizer = Optimizer(neural_net=nn,
-                    lr=config['learning_rate'],
-                    optimizer=config['optimizer'],
-                    beta=config['beta'],
-                    epsilon=config['epsilon'],
-                    beta1=config['beta1'],
-                    beta2=config['beta2'],
-                    decay=config['decay'])
+    nn = NeuralNetwork(config)
+    optimizer = Optimizer(nn=nn, config=config)
     
     batch_size = config['batch_size']
-    c = ObjectiveFunction()
+    criterion = ObjectiveFunction(method = config['criterion'])
     
     for epoch in range(config['epochs']):
         for batch in range(0, X_train.shape[0], batch_size):
@@ -41,30 +26,29 @@ def train(config, show_log):
             Y_batch = Y_train[batch:batch+batch_size]
 
             Y_hat_batch = nn.forward(X_batch)
-            weights, biases = nn.backward(Y_batch, Y_hat_batch)
-            optimizer.step(weights, biases)
+            nn.backward(X_batch, Y_batch, Y_hat_batch)
+            optimizer.step()
         
         optimizer.timestep += 1
         
         # Training
         Y_hat_train = nn.forward(X_train)
-        train_loss = c.criterion(config['criterion'], Y_train, Y_hat_train)
+        train_loss = criterion.get_loss(Y_train, Y_hat_train)
         train_accuracy = np.sum(np.argmax(Y_hat_train, axis=1) == np.argmax(Y_train, axis=1)) / Y_train.shape[0]
             
         # Validation
         Y_hat_val = nn.forward(X_val)
-        val_loss = c.criterion(config['criterion'], Y_val, Y_hat_val)
+        val_loss = criterion.get_loss(Y_val, Y_hat_val)
         val_accuracy = np.sum(np.argmax(Y_hat_val, axis=1) == np.argmax(Y_val, axis=1)) / Y_val.shape[0]
         
-        if show_log:
-            print("Epoch {} Train Loss {} Train Accuracy {} Val Loss {} Val Accuracy {}".format(epoch, train_loss, train_accuracy, val_loss, val_accuracy))
+        print("Epoch {} Train Loss {} Train Accuracy {} Val Loss {} Val Accuracy {}".format(epoch, train_loss, train_accuracy, val_loss, val_accuracy))
    
         train_loss_hist.append(train_loss)
         train_accuracy_hist.append(train_accuracy)
         val_loss_hist.append(val_loss)
         val_accuracy_hist.append(val_accuracy)
     
-    return nn, train_loss_hist, train_accuracy_hist, val_loss_hist, val_accuracy_hist
+    return nn
 
 network_config = {
     'input_size': 784,
@@ -79,7 +63,7 @@ network_config = {
     'beta2':0.9999,
     'epsilon': 1e-8,
     'epochs': 10,
-    'optimizer': "nadam",
+    'optimizer': "rmsprop",
     'criterion': "cel",
     'decay': 0.0005,
     'weight_initialization': "random",
@@ -97,11 +81,11 @@ CLASS_NAMES = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat', 'Sandal', 
 
 # Flatten the images
 train_images = train_images.reshape(train_images.shape[0], 784) / 255
-test_images = test_images.reshape(test_images.shape[0], 784) / 255
+X_test = test_images.reshape(test_images.shape[0], 784) / 255
 
 # Encode the labels
 train_labels = np.eye(10)[train_labels]
-test_labels = np.eye(10)[test_labels]
+Y_test = np.eye(10)[test_labels]
 
 # Prepare data for training and validation
 X_train, X_val, Y_train, Y_val = train_test_split(train_images, train_labels, test_size=0.1, shuffle=True, random_state=27)
@@ -109,10 +93,10 @@ X_train, X_val, Y_train, Y_val = train_test_split(train_images, train_labels, te
 nn = train(network_config)
 
 y_pred_train = nn.forward(X_train)
-y_pred_test = nn.forward(test_images)
+y_pred_test = nn.forward(X_test)
 
 y_true_train = np.argmax(Y_train, axis=1)
-y_true_test = np.argmax(test_labels, axis=1)
+y_true_test = np.argmax(Y_test, axis=1)
 preds_train = np.argmax(y_pred_train, axis=1)
 preds_test = np.argmax(y_pred_test, axis=1)
 

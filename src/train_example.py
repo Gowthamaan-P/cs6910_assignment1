@@ -86,3 +86,24 @@ network_config = {
 }
         
 nn, tl, ta, vl, va = train(network_config)
+
+# Plot changes in loss
+plt.plot(tl, c = 'b', label = 'Train')
+plt.plot(vl, c = 'r', label = 'Validation')
+plt.title('Loss vs Epochs')
+plt.xlabel('Epochs')
+plt.ylabel('Loss')
+plt.grid(linestyle='-.', linewidth=0.5)
+plt.legend()
+plt.show()
+
+# Plot changes in accuracy
+plt.plot(ta, c = 'b', label = 'Train')
+plt.plot(va, c = 'r', label = 'Validation')
+plt.title('Accuracy vs Epochs')
+plt.xlabel('Epochs')
+plt.ylabel('Accuarcy')
+plt.grid(linestyle='-.', linewidth=0.5)
+plt.legend()
+plt.show()
+
