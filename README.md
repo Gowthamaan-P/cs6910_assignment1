@@ -7,6 +7,7 @@ This repository contains all files for the first assignment of the CS6910 - Fund
 ## Contents
 
 * [Task](#task)
+* [Submission](#submission)
 * [Dataset](#dataset)
 * [Implementation Details](#implementation-details)
   - [Structure](#structure)
@@ -25,6 +26,11 @@ This repository contains all files for the first assignment of the CS6910 - Fund
 ## Task
 
 The task involves implementing a FeedForward Neural Network with Backpropagation from scratch.
+
+## Submission
+
+My WandB project: https://wandb.ai/ed23s037/CS6910_AS1
+My WandB report: https://api.wandb.ai/links/ed23s037/nfa8vpme
 
 ## Dataset
 
