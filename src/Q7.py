@@ -7,6 +7,7 @@ from ann.neural_network import NeuralNetwork
 from ann.objective_functions import ObjectiveFunction
 from ann.optimizer import Optimizer
 
+# Train network
 def train(config):
     train_loss_hist = []
     train_accuracy_hist = []
@@ -53,20 +54,20 @@ def train(config):
 network_config = {
     'input_size': 784,
     'output_size': 10,
-    'hidden_layers': 1,
-    'neurons':256,
-    'activation':'sigmoid',
+    'hidden_layers': 5,
+    'neurons':128,
+    'activation':'relu',
     'output_activation':'softmax',
     'learning_rate': 0.005,
     'beta': 0.8,
     'beta1': 0.9,
     'beta2':0.9999,
     'epsilon': 1e-8,
-    'epochs': 10,
-    'optimizer': "rmsprop",
+    'epochs': 25,
+    'optimizer': "adam",
     'criterion': "cel",
     'decay': 0.0005,
-    'weight_initialization': "random",
+    'weight_initialization': "xavier",
     'batch_size': 64,
 }
 
