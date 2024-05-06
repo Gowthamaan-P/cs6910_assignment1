@@ -1,7 +1,7 @@
 import numpy as np
 
-from neural_layer import NeuralLayer
-from objective_functions import ObjectiveFunction
+from .neural_layer import NeuralLayer
+from .objective_functions import ObjectiveFunction
 
 class NeuralNetwork:
     def __init__(self, config):
@@ -32,9 +32,9 @@ class NeuralNetwork:
         self.c = ObjectiveFunction(method=self.criterion)
 
         self.add_layers(config['input_size'],
-                         config['hidden_layers'],
+                         config['num_layers'],
                          config['output_size'],
-                         config['neurons'],
+                         config['hidden_size'],
                          config['activation'],
                          config['output_activation']
                         )

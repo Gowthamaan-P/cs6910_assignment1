@@ -1,5 +1,5 @@
 import numpy as np
-from neural_network import NeuralNetwork
+from .neural_network import NeuralNetwork
 
 class Optimizer:
     def __init__(self, nn:NeuralNetwork, config=None):
@@ -13,7 +13,7 @@ class Optimizer:
         self.nn, self.lr, self.optimizer = nn, config['learning_rate'], config['optimizer']
         self.beta, self.epsilon, self.beta1, self.beta2= config['beta'], config['epsilon'], config['beta1'], config['beta2']
         self.timestep = 0
-        self.decay = config['decay']
+        self.decay = config['weight_decay']
 
     def step(self):
         """
